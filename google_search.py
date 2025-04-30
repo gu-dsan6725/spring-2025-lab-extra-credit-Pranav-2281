@@ -7,17 +7,16 @@ and parse web content from the search results using the Google Search API.
 
 # Importing necessary libraries
 
-from collections import defaultdict
-from datetime import datetime, timedelta
-from typing import Any, Dict, List, Optional, Union
-
-import pandas as pd
+import os
 import requests
+from collections import defaultdict
+from datetime import datetime
+from typing import List
+from dotenv import load_dotenv
+from readability import Document
 from bs4 import BeautifulSoup
 from googlesearch import search
 from mcp.server.fastmcp import FastMCP
-from pydantic import BaseModel, Field
-from tabulate import tabulate
 
 # Creating an instance of the FastMCP server with the name "google_search"
 
